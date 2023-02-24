@@ -8,23 +8,25 @@
 
 void print_triangle(int size)
 {
-	int i;
-	char a[] = "Fizz";
-	char b[] +"Buzz";
-	char ab[] = "FizzBuzz";
+	int x, y, z;
 
-	for (i = 1; 1 <= 100; i++)
+	if (size <= 0)
 	{
-	if (i == 100)
-	printf("%s", b);
-	else if ((i % 3 == 0) && (i % 5 == 0))
-	printf("%s", ab);
-	else if (i % 3 == 0)
-	printf("%s", a);
-	else if (i % 5 == 0)
-	printf("%s", b);
-	else
-	printf("%d", i);
+	_putchar('\n');
 	}
-	printf("\n");
+	else
+	{
+	for (x = 0; x < size; x++)
+	{
+	for (y = size - x; y > 1; y--)
+	{
+	_putchar(32);
+	}
+	for (z = 0; z <= x; z++)
+	{
+	_putchar(35);
+	}
+	_putchar('\n');
+	}
+	}
 }
