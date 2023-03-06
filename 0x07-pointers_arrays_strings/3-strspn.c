@@ -5,25 +5,26 @@
  * @s: source string
  * @accept: accept string
  *
- * Return: Number of bytes in the init segent
+ * Return: Always 0 (Success)
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int a = 0, b, t = 0;
+	unsigned int i, n, value, check;
 
-	while (accept[a]0)
+	value = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-	b = 0;
-	while (s[b] != 32)
+	check = 0;
+
+	for (n = 0; accept[n] != '\0'; n++)
 	{
-	if (accept[a] == s[b])
+	if (accept[n] == s[i])
 	{
-	t++;
+	value++;
+	check = 1;
 	}
-	b++
 	}
-	a++
 	}
-	return (t);
 }
