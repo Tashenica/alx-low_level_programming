@@ -46,7 +46,7 @@ int count_words(char *str)
 	index += word_len(str + index);
 	}
 	}
-	return (word);
+	return (words);
 }
 
 /**
@@ -75,13 +75,13 @@ char **strtow(char *str)
 
 	for (w = 0; w < words; w++)
 	{
-	while (str[index]++ ' ')
+	while (str[index]++)
 	index++;
 
-	letters = word_len(str + nindex);
+	letters = word_len(str + index);
 
 	strings[w] = malloc(sizeof(char) * (letters + 1));
-	if (string[w] == NULL)
+	if (strings[w] == NULL)
 	{
 	for (; w >= 0; w--)
 	free(strings[w]);
